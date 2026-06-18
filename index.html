@@ -1,0 +1,714 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>EG Plomberie — Plombier chauffagiste d'exception · Hérault & Gard</title>
+<meta name="description" content="EG Plomberie — l'art de la plomberie et du chauffage. 20 ans de savoir-faire pour vos dépannages, urgences, réparations et installations dans l'Hérault et le Gard. Devis gratuit au 06 84 45 48 80." />
+<meta name="theme-color" content="#b85c38" />
+<meta name="robots" content="index, follow" />
+<meta property="og:type" content="website" />
+<meta property="og:title" content="EG Plomberie — Plombier chauffagiste, 20 ans de savoir-faire" />
+<meta property="og:description" content="Dépannage, urgence, réparation et installation. Hérault & Gard. Devis gratuit." />
+<meta property="og:locale" content="fr_FR" />
+
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;1,9..144,400;1,9..144,500&family=Manrope:wght@400;500;600;700&display=swap" rel="stylesheet" />
+
+<style>
+  :root{
+    --cream:#f6f0e6;
+    --cream-2:#fbf7ef;
+    --sand:#efe5d4;
+    --sand-deep:#e7dac4;
+    --clay:#bb5a38;
+    --clay-dark:#9a4830;
+    --clay-soft:#cd7a52;
+    --ochre:#d49a3f;
+    --ochre-soft:#e7c27a;
+    --sage:#8c997a;
+    --sage-deep:#5d6a4e;
+    --espresso:#2c241c;
+    --ink:#3c3228;
+    --muted:#857966;
+    --line:#e3d7c3;
+    --line-dark:#d6c7ad;
+    --shadow:0 18px 50px rgba(73,52,31,.12);
+    --shadow-sm:0 6px 22px rgba(73,52,31,.09);
+    --shadow-lg:0 34px 80px rgba(73,52,31,.20);
+    --maxw:1180px;
+    --r:18px;
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  html{scroll-behavior:smooth;scroll-padding-top:90px}
+  body{
+    font-family:'Manrope',-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;
+    color:var(--ink);background:var(--cream);line-height:1.65;
+    -webkit-font-smoothing:antialiased;overflow-x:hidden;position:relative;
+  }
+  /* grain texture */
+  body::before{content:"";position:fixed;inset:0;z-index:1;pointer-events:none;opacity:.05;mix-blend-mode:multiply;
+    background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='2' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");}
+  h1,h2,h3,h4,.serif{font-family:'Fraunces',Georgia,'Times New Roman',serif;font-weight:500;line-height:1.08;letter-spacing:-.015em}
+  a{color:inherit;text-decoration:none}
+  img,svg{display:block;max-width:100%}
+  .container{max-width:var(--maxw);margin:0 auto;padding:0 26px;position:relative;z-index:2}
+  .italic{font-style:italic;font-family:'Fraunces',serif}
+  .sr-only{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0,0,0,0)}
+
+  /* Buttons */
+  .btn{display:inline-flex;align-items:center;gap:11px;font-family:'Manrope';font-weight:600;font-size:.98rem;
+    padding:15px 28px;border-radius:999px;border:1.5px solid transparent;cursor:pointer;
+    transition:transform .2s ease, box-shadow .25s ease, background .25s, color .25s, border-color .25s;white-space:nowrap}
+  .btn svg{width:19px;height:19px}
+  .btn-primary{background:var(--clay);color:#fdf7ee;box-shadow:0 12px 26px rgba(187,90,56,.32)}
+  .btn-primary:hover{background:var(--clay-dark);transform:translateY(-2px);box-shadow:0 16px 32px rgba(187,90,56,.42)}
+  .btn-line{background:transparent;color:var(--espresso);border-color:var(--line-dark)}
+  .btn-line:hover{border-color:var(--clay);color:var(--clay);transform:translateY(-2px)}
+  .btn-cream{background:#fdf8ef;color:var(--clay-dark);box-shadow:var(--shadow-sm)}
+  .btn-cream:hover{transform:translateY(-2px);box-shadow:var(--shadow)}
+  .btn-ghost-light{background:transparent;color:#fdf7ee;border-color:rgba(253,247,238,.5)}
+  .btn-ghost-light:hover{background:rgba(253,247,238,.12);transform:translateY(-2px)}
+
+  /* Top bar */
+  .topbar{background:var(--espresso);color:#e9ddc8;font-size:.83rem;letter-spacing:.02em}
+  .topbar .container{display:flex;justify-content:space-between;align-items:center;min-height:42px;gap:14px;flex-wrap:wrap}
+  .topbar .tb{display:inline-flex;align-items:center;gap:8px}
+  .topbar svg{width:14px;height:14px;color:var(--ochre-soft)}
+  .topbar a{color:#fdf7ee;font-weight:600}
+
+  /* Header */
+  header.site{position:sticky;top:0;z-index:40;background:rgba(246,240,230,.86);backdrop-filter:blur(12px) saturate(140%);border-bottom:1px solid var(--line)}
+  .nav{display:flex;align-items:center;justify-content:space-between;min-height:74px;gap:18px}
+  .brand{display:flex;align-items:center;gap:12px}
+  .brand-mark{width:44px;height:44px;border-radius:50% 50% 50% 50%/60% 60% 40% 40%;background:linear-gradient(160deg,var(--clay-soft),var(--clay-dark));display:grid;place-items:center;flex:none;box-shadow:0 8px 18px rgba(154,72,48,.35)}
+  .brand-mark svg{width:23px;height:23px;color:#fdf7ee}
+  .brand-name{font-family:'Fraunces';font-size:1.3rem;font-weight:600;color:var(--espresso);letter-spacing:-.01em}
+  .brand-name span{color:var(--clay)}
+  .brand-sub{display:block;font-family:'Manrope';font-weight:600;font-size:.62rem;letter-spacing:.22em;text-transform:uppercase;color:var(--muted);margin-top:2px}
+  .nav-links{display:flex;align-items:center;gap:24px;margin-left:auto}
+  .nav-links a{font-weight:600;font-size:.95rem;color:var(--ink);position:relative;white-space:nowrap}
+  .nav-links a::after{content:"";position:absolute;left:0;bottom:-5px;width:0;height:1.5px;background:var(--clay);transition:width .25s}
+  .nav-links a:hover{color:var(--clay)}
+  .nav-links a:hover::after{width:100%}
+  .nav-cta{display:flex;align-items:center;gap:12px}
+  .nav-cta .btn{padding:12px 22px;font-size:.92rem}
+  .menu-toggle{display:none;background:none;border:1.5px solid var(--line-dark);border-radius:12px;width:46px;height:44px;color:var(--espresso);cursor:pointer}
+  .menu-toggle svg{width:23px;height:23px;margin:auto}
+  .mobile-menu{display:none;background:var(--cream-2);border-bottom:1px solid var(--line);padding:12px 26px 22px}
+  .mobile-menu a{display:block;padding:13px 4px;font-weight:600;border-bottom:1px solid var(--line);color:var(--ink)}
+  .mobile-menu .btn{width:100%;margin-top:14px}
+  .nav.open + .mobile-menu{display:block}
+
+  /* Hero */
+  .hero{position:relative;padding:74px 0 90px;overflow:hidden}
+  .hero .container{display:grid;grid-template-columns:1.05fr .95fr;gap:54px;align-items:center}
+  .eyebrow{display:inline-flex;align-items:center;gap:10px;font-family:'Manrope';font-weight:600;font-size:.8rem;letter-spacing:.18em;text-transform:uppercase;color:var(--clay-dark);margin-bottom:24px}
+  .eyebrow .bar{width:34px;height:1.5px;background:var(--clay)}
+  .hero h1{font-size:clamp(2.5rem,5.4vw,4.3rem);color:var(--espresso);margin-bottom:22px;font-weight:500}
+  .hero h1 em{font-style:italic;color:var(--clay)}
+  .hero .lead{font-size:clamp(1.05rem,1.7vw,1.22rem);color:var(--muted);max-width:520px;margin-bottom:34px}
+  .hero-actions{display:flex;flex-wrap:wrap;gap:14px;margin-bottom:36px}
+  .hero-meta{display:flex;flex-wrap:wrap;gap:26px;align-items:center}
+  .hero-meta .m{display:flex;flex-direction:column}
+  .hero-meta b{font-family:'Fraunces';font-size:1.7rem;color:var(--espresso);line-height:1}
+  .hero-meta span{font-size:.82rem;color:var(--muted);letter-spacing:.02em;margin-top:3px}
+  .hero-meta .div{width:1px;height:38px;background:var(--line-dark)}
+
+  /* Hero arch art */
+  .hero-art{position:relative;justify-self:center;width:100%;max-width:440px}
+  .arch{position:relative;aspect-ratio:4/5;border-radius:230px 230px 26px 26px;overflow:hidden;
+    background:linear-gradient(165deg,#c97a51 0%, #b3512f 52%, #97442b 100%);
+    box-shadow:var(--shadow-lg);border:1px solid rgba(154,72,48,.25)}
+  .arch::after{content:"";position:absolute;inset:0;border-radius:inherit;border:10px solid rgba(253,247,238,.18);pointer-events:none}
+  .arch .arch-illu{position:absolute;inset:0;width:100%;height:100%}
+  .arch .sun{position:absolute;top:16%;left:50%;transform:translateX(-50%);width:120px;height:120px;border-radius:50%;
+    background:radial-gradient(circle at 50% 45%,#fff6e2,#ffe6ad 60%,#f6c873 100%);box-shadow:0 0 70px 24px rgba(255,231,176,.55)}
+  .arch .hill{position:absolute;bottom:0;left:0;right:0}
+  .arch .hill.h1{height:46%;background:linear-gradient(180deg,#8a6a47,#6f5234);border-radius:60% 60% 0 0/26% 26% 0 0}
+  .arch .hill.h2{height:32%;background:linear-gradient(180deg,#5d6a4e,#46523a);border-radius:70% 70% 0 0/30% 30% 0 0;opacity:.96}
+  .arch .palm{position:absolute;top:8%;right:6%;width:120px;color:#3c3228;opacity:.5}
+  .seal{position:absolute;right:-22px;bottom:38px;width:118px;height:118px;border-radius:50%;
+    background:var(--cream-2);box-shadow:var(--shadow);display:grid;place-items:center;text-align:center;border:1px solid var(--line);animation:spin 26s linear infinite}
+  .seal svg{position:absolute;inset:0;width:100%;height:100%}
+  .seal .seal-c{font-family:'Fraunces';font-weight:600;color:var(--clay);line-height:.9}
+  .seal .seal-c b{display:block;font-size:1.9rem}
+  .seal .seal-c span{font-size:.62rem;letter-spacing:.12em;text-transform:uppercase;color:var(--muted)}
+  @keyframes spin{to{transform:rotate(360deg)}}
+  .seal .seal-inner{animation:spin 26s linear infinite reverse}
+  .chip-float{position:absolute;left:-20px;top:40px;background:var(--cream-2);border:1px solid var(--line);border-radius:14px;padding:11px 15px;box-shadow:var(--shadow-sm);display:flex;align-items:center;gap:10px;font-weight:600;font-size:.86rem}
+  .chip-float svg{width:20px;height:20px;color:var(--sage-deep)}
+
+  /* marquee */
+  .marquee{background:var(--espresso);color:#efe2cd;overflow:hidden;padding:16px 0;border-top:1px solid rgba(255,255,255,.06)}
+  .marquee .track{display:flex;gap:40px;white-space:nowrap;width:max-content;animation:scroll 26s linear infinite;font-family:'Fraunces';font-style:italic;font-size:1.15rem}
+  .marquee .track span{display:inline-flex;align-items:center;gap:40px;color:#f0e4cf}
+  .marquee .dot{color:var(--ochre)}
+  @keyframes scroll{to{transform:translateX(-50%)}}
+  @media (prefers-reduced-motion:reduce){.marquee .track{animation:none}.seal,.seal-inner{animation:none}}
+
+  /* Sections */
+  section{padding:96px 0;position:relative}
+  .head{max-width:680px;margin-bottom:54px}
+  .head.center{margin-left:auto;margin-right:auto;text-align:center}
+  .kicker{display:inline-flex;align-items:center;gap:10px;font-weight:600;font-size:.78rem;letter-spacing:.18em;text-transform:uppercase;color:var(--clay-dark);margin-bottom:18px}
+  .kicker .bar{width:30px;height:1.5px;background:var(--clay)}
+  .head h2{font-size:clamp(2rem,3.6vw,2.9rem);color:var(--espresso);margin-bottom:16px;font-weight:500}
+  .head h2 em{font-style:italic;color:var(--clay)}
+  .head p{color:var(--muted);font-size:1.06rem}
+
+  /* About / savoir-faire */
+  .about{background:var(--cream-2)}
+  .about .container{display:grid;grid-template-columns:1fr 1fr;gap:60px;align-items:center}
+  .about-text h2{font-size:clamp(1.9rem,3.4vw,2.7rem);color:var(--espresso);margin-bottom:20px}
+  .about-text h2 em{font-style:italic;color:var(--clay)}
+  .about-text p{color:var(--ink);margin-bottom:16px;font-size:1.04rem}
+  .about-text p.muted{color:var(--muted)}
+  .about-stats{display:grid;grid-template-columns:1fr 1fr;gap:18px}
+  .stat-card{background:var(--cream);border:1px solid var(--line);border-radius:var(--r);padding:26px;box-shadow:var(--shadow-sm);position:relative;overflow:hidden}
+  .stat-card::before{content:"";position:absolute;top:-30px;right:-30px;width:80px;height:80px;border-radius:50%;background:rgba(212,154,63,.14)}
+  .stat-card b{font-family:'Fraunces';font-size:2.6rem;color:var(--clay);display:block;line-height:1}
+  .stat-card span{color:var(--muted);font-size:.92rem;font-weight:500}
+  .stat-card.dark{background:var(--sage-deep);border-color:var(--sage-deep)}
+  .stat-card.dark b{color:var(--ochre-soft)}
+  .stat-card.dark span{color:#e4e8da}
+
+  /* Services */
+  .services .grid{display:grid;grid-template-columns:1fr 1fr;gap:26px}
+  .svc{position:relative;background:var(--cream-2);border:1px solid var(--line);border-radius:var(--r);padding:34px;
+    display:grid;grid-template-columns:auto 1fr;gap:24px;transition:transform .25s, box-shadow .25s, border-color .25s;overflow:hidden}
+  .svc:hover{transform:translateY(-5px);box-shadow:var(--shadow);border-color:var(--line-dark)}
+  .svc .num{font-family:'Fraunces';font-style:italic;font-size:1.05rem;color:var(--clay);opacity:.8}
+  .svc .svc-ic{width:58px;height:58px;border-radius:16px;background:var(--sand);display:grid;place-items:center;color:var(--clay-dark);flex:none;border:1px solid var(--line)}
+  .svc .svc-ic svg{width:28px;height:28px}
+  .svc h3{font-size:1.4rem;color:var(--espresso);margin-bottom:8px}
+  .svc p{color:var(--muted);font-size:.97rem;margin-bottom:14px}
+  .svc ul{list-style:none;display:flex;flex-wrap:wrap;gap:8px}
+  .svc li{font-size:.86rem;color:var(--ink);background:var(--sand);border:1px solid var(--line);border-radius:999px;padding:5px 13px}
+
+  /* Method / process */
+  .method{background:var(--sand);}
+  .steps{display:grid;grid-template-columns:repeat(4,1fr);gap:26px;counter-reset:step}
+  .step{position:relative;padding-top:14px}
+  .step .n{font-family:'Fraunces';font-size:2.6rem;color:var(--clay);line-height:1;margin-bottom:14px;display:flex;align-items:center;gap:12px}
+  .step .n::after{content:"";flex:1;height:1.5px;background:repeating-linear-gradient(90deg,var(--line-dark) 0 8px,transparent 8px 14px)}
+  .step:last-child .n::after{display:none}
+  .step .s-ic{width:46px;height:46px;border-radius:13px;background:var(--cream-2);border:1px solid var(--line);display:grid;place-items:center;color:var(--clay-dark);margin-bottom:16px}
+  .step .s-ic svg{width:23px;height:23px}
+  .step h4{font-size:1.18rem;color:var(--espresso);margin-bottom:7px}
+  .step p{color:var(--muted);font-size:.94rem}
+
+  /* Quote */
+  .quote{background:linear-gradient(155deg,var(--clay) 0%, var(--clay-dark) 100%);color:#fdf7ee;position:relative;overflow:hidden}
+  .quote::before{content:"";position:absolute;top:-120px;right:-80px;width:360px;height:360px;border-radius:50%;background:rgba(255,255,255,.06)}
+  .quote::after{content:"";position:absolute;bottom:-140px;left:-90px;width:320px;height:320px;border-radius:50%;background:rgba(44,36,28,.12)}
+  .quote .container{max-width:920px;text-align:center}
+  .quote .qmark{font-family:'Fraunces';font-size:5rem;line-height:.5;color:var(--ochre-soft);opacity:.8}
+  .quote blockquote{font-family:'Fraunces';font-style:italic;font-weight:400;font-size:clamp(1.5rem,3vw,2.3rem);line-height:1.32;margin:18px 0 28px}
+  .quote .sign{display:flex;align-items:center;justify-content:center;gap:14px}
+  .quote .sign .av{width:50px;height:50px;border-radius:50%;background:rgba(253,247,238,.16);display:grid;place-items:center;border:1px solid rgba(253,247,238,.35)}
+  .quote .sign .av svg{width:24px;height:24px;color:#fdf7ee}
+  .quote .sign b{font-family:'Manrope';font-weight:700;font-size:1rem;display:block;margin-bottom:2px}
+  .quote .sign span{font-size:.85rem;color:#f3dcc7}
+
+  /* Zones */
+  .zones{background:var(--cream-2)}
+  .zones .container{display:grid;grid-template-columns:.9fr 1.1fr;gap:54px;align-items:center}
+  .zones-art{position:relative;aspect-ratio:1/1;border-radius:24px;overflow:hidden;background:linear-gradient(160deg,var(--sage),var(--sage-deep));box-shadow:var(--shadow);display:grid;place-items:center}
+  .zones-art .pin{position:absolute;display:flex;flex-direction:column;align-items:center;color:#fdf7ee;font-weight:700;font-size:.92rem;text-shadow:0 1px 4px rgba(0,0,0,.3)}
+  .zones-art .pin svg{width:34px;height:34px;filter:drop-shadow(0 4px 6px rgba(0,0,0,.3))}
+  .zones-art .pin.p1{top:34%;left:30%}
+  .zones-art .pin.p2{top:52%;left:58%}
+  .zones-art .rings{position:absolute;width:60%;height:60%;border-radius:50%;border:1.5px dashed rgba(253,247,238,.4)}
+  .zones-art .rings.r2{width:84%;height:84%;opacity:.6}
+  .zone-list{display:flex;flex-direction:column;gap:18px}
+  .zone{background:var(--cream);border:1px solid var(--line);border-radius:var(--r);padding:24px 26px;box-shadow:var(--shadow-sm)}
+  .zone .zt{display:flex;align-items:center;gap:14px;margin-bottom:12px}
+  .zone .zn{width:48px;height:48px;border-radius:14px;background:var(--clay);color:#fdf7ee;display:grid;place-items:center;font-family:'Fraunces';font-weight:600;font-size:1.1rem;flex:none}
+  .zone h3{font-size:1.3rem;color:var(--espresso)}
+  .zone .zsub{font-size:.84rem;color:var(--muted);font-weight:500}
+  .zone .chips{display:flex;flex-wrap:wrap;gap:8px}
+  .zone .chips span{font-size:.85rem;color:var(--ink);background:var(--sand);border:1px solid var(--line);border-radius:999px;padding:5px 13px}
+  .zone-note{color:var(--muted);font-size:.95rem;margin-top:6px}
+  .zone-note a{color:var(--clay);font-weight:700}
+
+  /* Urgence */
+  .urgence{background:var(--espresso);color:#f1e6d3}
+  .urgence .container{display:flex;align-items:center;justify-content:space-between;gap:28px;flex-wrap:wrap}
+  .urgence .ul{display:flex;align-items:center;gap:22px}
+  .urgence .u-ic{width:62px;height:62px;border-radius:18px;background:rgba(212,154,63,.18);display:grid;place-items:center;flex:none;border:1px solid rgba(212,154,63,.4)}
+  .urgence .u-ic svg{width:30px;height:30px;color:var(--ochre-soft)}
+  .urgence h3{font-size:1.6rem;color:#fdf7ee;margin-bottom:4px}
+  .urgence p{color:#d9cab2}
+
+  /* Contact */
+  .contact{background:var(--cream)}
+  .contact-card{position:relative;background:var(--cream-2);border:1px solid var(--line);border-radius:28px;padding:54px 44px;box-shadow:var(--shadow);max-width:980px;margin:0 auto;overflow:hidden;text-align:center}
+  .contact-card::before{content:"";position:absolute;top:-90px;right:-70px;width:240px;height:240px;border-radius:50%;background:rgba(212,154,63,.12)}
+  .contact-card .kicker{justify-content:center}
+  .contact-card h2{font-size:clamp(1.9rem,3.4vw,2.7rem);color:var(--espresso);margin-bottom:14px}
+  .contact-card h2 em{font-style:italic;color:var(--clay)}
+  .contact-card .sub{color:var(--muted);max-width:540px;margin:0 auto 30px}
+  .contact-actions{display:flex;gap:15px;justify-content:center;flex-wrap:wrap;margin-bottom:36px}
+  .contact-actions .btn{padding:17px 30px;font-size:1.05rem}
+  .cinfos{display:grid;grid-template-columns:0.9fr 1.3fr 0.9fr;gap:16px;border-top:1px solid var(--line);padding-top:30px}
+  .ci{display:flex;align-items:center;gap:13px;justify-content:center}
+  .ci .ic{width:48px;height:48px;border-radius:14px;background:var(--sand);border:1px solid var(--line);display:grid;place-items:center;flex:none;color:var(--clay-dark)}
+  .ci .ic svg{width:22px;height:22px}
+  .ci small{display:block;font-size:.72rem;text-transform:uppercase;letter-spacing:.1em;color:var(--muted)}
+  .ci b{font-size:.94rem;color:var(--espresso);overflow-wrap:break-word}
+  .ci.email b{font-size:.9rem}
+  .ci a:hover b{color:var(--clay)}
+
+  /* Footer */
+  footer.site{background:var(--espresso);color:#b6a78f;padding:60px 0 30px;font-size:.94rem}
+  .f-top{display:grid;grid-template-columns:1.5fr 1fr 1fr;gap:40px;padding-bottom:34px;border-bottom:1px solid rgba(255,255,255,.08)}
+  .f-brand .brand-name{color:#fdf7ee}
+  .f-brand .brand-name span{color:var(--ochre-soft)}
+  .f-brand p{margin-top:16px;max-width:330px;color:#a7967d}
+  .f-col h4{color:#fdf7ee;font-family:'Fraunces';font-size:1.1rem;margin-bottom:16px;font-weight:500}
+  .f-col ul{list-style:none;display:flex;flex-direction:column;gap:11px}
+  .f-col a:hover{color:#fdf7ee}
+  .f-col .fl{display:flex;align-items:center;gap:10px}
+  .f-col .fl svg{width:16px;height:16px;color:var(--ochre-soft);flex:none}
+  .f-bottom{padding-top:24px;display:flex;justify-content:space-between;gap:14px;flex-wrap:wrap;font-size:.84rem;color:#8c7d66}
+
+  /* FAB */
+  .fab{position:fixed;right:18px;bottom:18px;z-index:60;display:none;align-items:center;gap:10px;background:var(--clay);color:#fdf7ee;font-weight:700;padding:15px 21px;border-radius:999px;box-shadow:0 14px 30px rgba(187,90,56,.5)}
+  .fab svg{width:21px;height:21px}
+
+  /* reveal */
+  .reveal{opacity:0;transform:translateY(26px);transition:opacity .7s ease,transform .7s ease}
+  .reveal.in{opacity:1;transform:none}
+
+  /* Responsive */
+  @media (max-width:980px){
+    .hero .container{grid-template-columns:1fr;gap:46px}
+    .hero-art{max-width:360px}
+    .about .container,.zones .container{grid-template-columns:1fr;gap:36px}
+    .services .grid{grid-template-columns:1fr}
+    .steps{grid-template-columns:1fr 1fr;gap:30px}
+    .step .n::after{display:none}
+    .f-top{grid-template-columns:1fr 1fr}
+  }
+  @media (max-width:1100px){
+    .nav-links{display:none}.menu-toggle{display:grid}.nav-cta .btn-quote{display:none}
+    .fab{display:inline-flex}
+  }
+  @media (max-width:560px){
+    section{padding:64px 0}
+    .svc{grid-template-columns:1fr;gap:16px}
+    .steps{grid-template-columns:1fr}
+    .cinfos{grid-template-columns:1fr}
+    .f-top{grid-template-columns:1fr}
+    .urgence .container{flex-direction:column;align-items:flex-start}
+    .about-stats{grid-template-columns:1fr 1fr}
+    .topbar .tb-zone{display:none}
+    .contact-card{padding:40px 24px}
+    .hero-actions .btn{flex:1 1 100%;justify-content:center}
+    .seal{width:92px;height:92px;right:2px;bottom:14px}
+    .seal .seal-c b{font-size:1.5rem}
+    .chip-float{left:2px;top:10px;padding:9px 12px;font-size:.8rem}
+  }
+</style>
+</head>
+<body>
+
+<!-- Top bar -->
+<div class="topbar">
+  <div class="container">
+    <span class="tb tb-zone">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 12-9 12s-9-5-9-12a9 9 0 0 1 18 0Z"/><circle cx="12" cy="10" r="3"/></svg>
+      Artisan plombier-chauffagiste · Hérault &amp; Gard
+    </span>
+    <span class="tb">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.91.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92Z"/></svg>
+      <a href="tel:+33684454880">06 84 45 48 80</a>
+    </span>
+  </div>
+</div>
+
+<!-- Header -->
+<header class="site">
+  <div class="container">
+    <nav class="nav" id="nav">
+      <a class="brand" href="#top" aria-label="EG Plomberie, accueil">
+        <span class="brand-mark" aria-hidden="true">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2.5S6 9 6 13.5a6 6 0 0 0 12 0C18 9 12 2.5 12 2.5Z"/></svg>
+        </span>
+        <span>
+          <span class="brand-name">EG <span>Plomberie</span></span>
+          <span class="brand-sub">Savoir-faire · Hérault &amp; Gard</span>
+        </span>
+      </a>
+      <div class="nav-links">
+        <a href="#savoir-faire">Savoir-faire</a>
+        <a href="#services">Prestations</a>
+        <a href="#methode">Méthode</a>
+        <a href="#zones">Zones</a>
+        <a href="#contact">Contact</a>
+      </div>
+      <div class="nav-cta">
+        <a class="btn btn-line" href="tel:+33684454880">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.91.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92Z"/></svg>
+          06 84 45 48 80
+        </a>
+        <a class="btn btn-primary btn-quote" href="mailto:esposito.guilhem@gmail.com?subject=Demande%20de%20devis%20gratuit%20-%20EG%20Plomberie&amp;body=Bonjour%20Guilhem%2C%0D%0A%0D%0AJe%20souhaite%20obtenir%20un%20devis%20gratuit.%0D%0A%0D%0ANom%20%3A%0D%0AT%C3%A9l%C3%A9phone%20%3A%0D%0ACommune%20%3A%0D%0ANature%20des%20travaux%20%3A%0D%0A%0D%0AMerci.">Devis gratuit</a>
+        <button class="menu-toggle" id="menuToggle" aria-label="Menu" aria-expanded="false">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
+        </button>
+      </div>
+    </nav>
+    <div class="mobile-menu" id="mobileMenu">
+      <a href="#savoir-faire">Savoir-faire</a>
+      <a href="#services">Prestations</a>
+      <a href="#methode">Méthode</a>
+      <a href="#zones">Zones</a>
+      <a href="#contact">Contact</a>
+      <a class="btn btn-primary" href="mailto:esposito.guilhem@gmail.com?subject=Demande%20de%20devis%20gratuit%20-%20EG%20Plomberie">Demander un devis gratuit</a>
+    </div>
+  </div>
+</header>
+
+<main id="top">
+<!-- Hero -->
+<section class="hero">
+  <div class="container">
+    <div class="hero-text">
+      <span class="eyebrow"><span class="bar"></span>20 ans de savoir-faire</span>
+      <h1>L'art de la plomberie,<br>le <em>confort</em> en héritage.</h1>
+      <p class="lead">EG Plomberie conçoit, répare et installe avec la précision de l'artisan. Dépannage, urgence et rénovation dans l'Hérault et le Gard — un travail soigné, pensé pour durer.</p>
+      <div class="hero-actions">
+        <a class="btn btn-primary" href="mailto:esposito.guilhem@gmail.com?subject=Demande%20de%20devis%20gratuit%20-%20EG%20Plomberie&amp;body=Bonjour%20Guilhem%2C%0D%0A%0D%0AJe%20souhaite%20obtenir%20un%20devis%20gratuit.%0D%0A%0D%0ANom%20%3A%0D%0AT%C3%A9l%C3%A9phone%20%3A%0D%0ACommune%20%3A%0D%0ANature%20des%20travaux%20%3A%0D%0A%0D%0AMerci.">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2Z"/><polyline points="22,6 12,13 2,6"/></svg>
+          Demander un devis gratuit
+        </a>
+        <a class="btn btn-line" href="tel:+33684454880">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.91.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92Z"/></svg>
+          Appeler l'artisan
+        </a>
+      </div>
+      <div class="hero-meta">
+        <div class="m"><b>20 ans</b><span>d'expérience</span></div>
+        <span class="div"></span>
+        <div class="m"><b>34 · 30</b><span>Hérault &amp; Gard</span></div>
+        <span class="div"></span>
+        <div class="m"><b>Devis</b><span>gratuit &amp; clair</span></div>
+      </div>
+    </div>
+
+    <div class="hero-art reveal">
+      <div class="arch" aria-hidden="true">
+        <svg class="arch-illu" viewBox="0 0 360 470" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <g stroke="#fdf7ee" stroke-width="3.4" stroke-linecap="round" stroke-linejoin="round">
+            <!-- plan de travail -->
+            <line x1="64" y1="320" x2="296" y2="320"/>
+            <!-- vasque -->
+            <path d="M120 320 C128 380 232 380 240 320"/>
+            <!-- platine du robinet -->
+            <path d="M166 320 V304 Q166 300 170 300 H190 Q194 300 194 304 V320"/>
+            <!-- colonne -->
+            <path d="M180 300 V178"/>
+            <!-- col de cygne -->
+            <path d="M180 178 C180 138 188 120 206 120 C226 120 232 140 232 162 V196"/>
+            <!-- bec -->
+            <path d="M223 196 H241"/>
+            <!-- mitigeur / levier -->
+            <path d="M180 200 L150 186"/>
+            <!-- alimentation + vanne -->
+            <path d="M72 256 H112 a12 12 0 0 1 12 12 V300"/>
+            <circle cx="72" cy="256" r="15"/>
+            <line x1="72" y1="244" x2="72" y2="268"/>
+            <line x1="60" y1="256" x2="84" y2="256"/>
+          </g>
+          <!-- gouttes -->
+          <path d="M232 206 C232 206 223 218 223 226 a9 9 0 0 0 18 0 C241 218 232 206 232 206 Z" fill="#ecc586"/>
+          <path d="M231 244 C231 244 225 252 225 257 a6 6 0 0 0 12 0 C237 252 231 244 231 244 Z" fill="#f4dca8"/>
+        </svg>
+      </div>
+      <div class="chip-float">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>
+        Travail garanti
+      </div>
+      <div class="seal" aria-label="Depuis 20 ans">
+        <svg viewBox="0 0 120 120" aria-hidden="true">
+          <defs><path id="circ" d="M60,60 m-44,0 a44,44 0 1,1 88,0 a44,44 0 1,1 -88,0"/></defs>
+          <text font-family="Manrope" font-size="10.5" font-weight="600" letter-spacing="3.5" fill="#857966">
+            <textPath href="#circ" startOffset="0%">· SAVOIR-FAIRE · ARTISAN · EG PLOMBERIE </textPath>
+          </text>
+        </svg>
+        <span class="seal-c"><b>20</b><span>ans</span></span>
+      </div>
+    </div>
+  </div>
+</section>
+</main>
+
+<!-- Marquee -->
+<div class="marquee" aria-hidden="true">
+  <div class="track">
+    <span>Plomberie <i class="dot">✦</i> Chauffage <i class="dot">✦</i> Dépannage <i class="dot">✦</i> Urgence <i class="dot">✦</i> Réparation <i class="dot">✦</i> Installation <i class="dot">✦</i> Rénovation <i class="dot">✦</i></span>
+    <span>Plomberie <i class="dot">✦</i> Chauffage <i class="dot">✦</i> Dépannage <i class="dot">✦</i> Urgence <i class="dot">✦</i> Réparation <i class="dot">✦</i> Installation <i class="dot">✦</i> Rénovation <i class="dot">✦</i></span>
+  </div>
+</div>
+
+<!-- Savoir-faire / About -->
+<section class="about" id="savoir-faire">
+  <div class="container">
+    <div class="about-text reveal">
+      <span class="kicker"><span class="bar"></span>Le savoir-faire</span>
+      <h2>Deux décennies de métier, <em>au service de votre eau et de votre chaleur.</em></h2>
+      <p>Chez EG Plomberie, chaque intervention est traitée avec le même soin : un diagnostic juste, des gestes précis et des finitions impeccables. C'est ça, l'artisanat — la maîtrise qui transforme une réparation en tranquillité durable.</p>
+      <p class="muted">De la fuite discrète à la rénovation complète d'une salle de bain, vous avez en face de vous un seul interlocuteur, expérimenté et exigeant, qui s'engage sur la qualité de son travail.</p>
+    </div>
+    <div class="about-stats reveal">
+      <div class="stat-card"><b>20</b><span>années d'expérience</span></div>
+      <div class="stat-card dark"><b>100%</b><span>devis gratuit &amp; transparent</span></div>
+      <div class="stat-card"><b>2</b><span>départements couverts</span></div>
+      <div class="stat-card"><b>A→Z</b><span>réparation &amp; installation</span></div>
+    </div>
+  </div>
+</section>
+
+<!-- Services -->
+<section class="services" id="services">
+  <div class="container">
+    <div class="head center reveal">
+      <span class="kicker" style="justify-content:center"><span class="bar"></span>Prestations<span class="bar"></span></span>
+      <h2>Un <em>savoir-faire complet</em>, de l'urgence au sur-mesure</h2>
+      <p>Plomberie et chauffage réunis sous une même main experte.</p>
+    </div>
+    <div class="grid">
+
+      <article class="svc reveal">
+        <div class="svc-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2.5S6 9 6 13.5a6 6 0 0 0 12 0C18 9 12 2.5 12 2.5Z"/></svg></div>
+        <div>
+          <div class="num">01</div>
+          <h3>Plomberie</h3>
+          <p>Installation et réparation soignées de toute votre plomberie sanitaire.</p>
+          <ul><li>Fuites &amp; recherche</li><li>Robinetterie</li><li>WC &amp; sanitaires</li><li>Canalisations</li></ul>
+        </div>
+      </article>
+
+      <article class="svc reveal">
+        <div class="svc-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M8.5 14.5A2.5 2.5 0 0 0 11 12V5a2 2 0 1 1 4 0v7a2.5 2.5 0 0 0 .5 1.5"/><path d="M13 16a3 3 0 1 1-6 0 3 3 0 0 1 6 0Z"/></svg></div>
+        <div>
+          <div class="num">02</div>
+          <h3>Chauffage</h3>
+          <p>Le confort thermique de votre foyer, maîtrisé toute l'année.</p>
+          <ul><li>Chaudières</li><li>Radiateurs</li><li>Chauffe-eau</li><li>Entretien</li></ul>
+        </div>
+      </article>
+
+      <article class="svc reveal">
+        <div class="svc-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg></div>
+        <div>
+          <div class="num">03</div>
+          <h3>Dépannage &amp; urgence</h3>
+          <p>Une panne, une fuite ? Une réaction rapide pour limiter les dégâts.</p>
+          <ul><li>Dégât des eaux</li><li>Panne d'eau chaude</li><li>Débouchage</li></ul>
+        </div>
+      </article>
+
+      <article class="svc reveal">
+        <div class="svc-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M14.7 6.3a4 4 0 0 0-5.4 5.4L3 18v3h3l6.3-6.3a4 4 0 0 0 5.4-5.4l-2.7 2.7-2-2 2.7-2.7Z"/></svg></div>
+        <div>
+          <div class="num">04</div>
+          <h3>Réparation &amp; installation</h3>
+          <p>Du neuf comme de la rénovation, exécuté avec exigence.</p>
+          <ul><li>Salle de bain</li><li>Cuisine</li><li>Mise aux normes</li><li>Réseaux d'eau</li></ul>
+        </div>
+      </article>
+
+    </div>
+  </div>
+</section>
+
+<!-- Méthode -->
+<section class="method" id="methode">
+  <div class="container">
+    <div class="head reveal">
+      <span class="kicker"><span class="bar"></span>Notre méthode</span>
+      <h2>Un savoir-faire <em>en quatre temps</em></h2>
+      <p>Une façon de travailler claire et rassurante, du premier appel à la dernière vérification.</p>
+    </div>
+    <div class="steps">
+      <div class="step reveal">
+        <div class="n">01<span></span></div>
+        <div class="s-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2Z"/></svg></div>
+        <h4>Écoute &amp; diagnostic</h4>
+        <p>On comprend votre besoin et on identifie précisément l'origine du problème.</p>
+      </div>
+      <div class="step reveal">
+        <div class="n">02<span></span></div>
+        <div class="s-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8Z"/><polyline points="14 2 14 8 20 8"/><line x1="9" y1="15" x2="15" y2="15"/></svg></div>
+        <h4>Devis transparent</h4>
+        <p>Un devis gratuit, détaillé et sans surprise, avant toute intervention.</p>
+      </div>
+      <div class="step reveal">
+        <div class="n">03<span></span></div>
+        <div class="s-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M14.7 6.3a4 4 0 0 0-5.4 5.4L3 18v3h3l6.3-6.3a4 4 0 0 0 5.4-5.4l-2.7 2.7-2-2 2.7-2.7Z"/></svg></div>
+        <h4>Intervention soignée</h4>
+        <p>Un travail propre, précis et respectueux de votre intérieur.</p>
+      </div>
+      <div class="step reveal">
+        <div class="n">04<span></span></div>
+        <div class="s-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2 4 5v6c0 5 3.4 8.5 8 11 4.6-2.5 8-6 8-11V5l-8-3Z"/><polyline points="9 12 11 14 15 10"/></svg></div>
+        <h4>Suivi &amp; garantie</h4>
+        <p>On vérifie, on explique, et on reste disponible après le passage.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Quote -->
+<section class="quote">
+  <div class="container reveal">
+    <div class="qmark">&ldquo;</div>
+    <blockquote>Un bon plombier ne se contente pas de réparer&nbsp;: il fait en sorte que vous n'y pensiez plus. C'est tout le sens de mon métier depuis 20 ans.</blockquote>
+    <div class="sign">
+      <span class="av"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg></span>
+      <div style="text-align:left"><b>Guilhem</b><span>Artisan fondateur · EG Plomberie</span></div>
+    </div>
+  </div>
+</section>
+
+<!-- Zones -->
+<section class="zones" id="zones">
+  <div class="container">
+    <div class="zones-art reveal" aria-hidden="true">
+      <span class="rings"></span><span class="rings r2"></span>
+      <span class="pin p1"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2a7 7 0 0 0-7 7c0 5 7 13 7 13s7-8 7-13a7 7 0 0 0-7-7Zm0 9.5A2.5 2.5 0 1 1 12 6.5a2.5 2.5 0 0 1 0 5Z"/></svg>Hérault</span>
+      <span class="pin p2"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2a7 7 0 0 0-7 7c0 5 7 13 7 13s7-8 7-13a7 7 0 0 0-7-7Zm0 9.5A2.5 2.5 0 1 1 12 6.5a2.5 2.5 0 0 1 0 5Z"/></svg>Gard</span>
+    </div>
+    <div>
+      <div class="head reveal" style="margin-bottom:30px">
+        <span class="kicker"><span class="bar"></span>Zones d'intervention</span>
+        <h2>Présent dans l'<em>Hérault</em> &amp; le <em>Gard</em></h2>
+        <p>Un artisan local, proche de chez vous et de vos besoins.</p>
+      </div>
+      <div class="zone-list">
+        <div class="zone reveal">
+          <div class="zt"><span class="zn">34</span><div><h3>Hérault</h3><span class="zsub">et communes alentours</span></div></div>
+          <div class="chips"><span>Montpellier</span><span>Béziers</span><span>Sète</span><span>Lunel</span><span>Agde</span><span>Lattes</span></div>
+        </div>
+        <div class="zone reveal">
+          <div class="zt"><span class="zn">30</span><div><h3>Gard</h3><span class="zsub">et communes alentours</span></div></div>
+          <div class="chips"><span>Nîmes</span><span>Alès</span><span>Bagnols-sur-Cèze</span><span>Uzès</span><span>Beaucaire</span><span>Vauvert</span></div>
+        </div>
+        <p class="zone-note">Votre commune n'apparaît pas ? Appelez-nous&nbsp;: <a href="tel:+33684454880">06 84 45 48 80</a></p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Urgence -->
+<section class="urgence" style="padding:42px 0">
+  <div class="container">
+    <div class="ul">
+      <span class="u-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg></span>
+      <div>
+        <h3>Une urgence ? On agit vite.</h3>
+        <p>Fuite, dégât des eaux, panne de chauffage… Composez directement le numéro.</p>
+      </div>
+    </div>
+    <a class="btn btn-cream" href="tel:+33684454880">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.91.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92Z"/></svg>
+      Appeler le 06 84 45 48 80
+    </a>
+  </div>
+</section>
+
+<!-- Contact -->
+<section class="contact" id="contact">
+  <div class="container">
+    <div class="contact-card reveal">
+      <span class="kicker"><span class="bar"></span>Contact<span class="bar"></span></span>
+      <h2>Parlons de votre <em>projet</em></h2>
+      <p class="sub">Réparation, installation ou simple conseil&nbsp;: contactez votre artisan pour un devis gratuit et sans engagement.</p>
+      <div class="contact-actions">
+        <a class="btn btn-primary" href="tel:+33684454880">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.91.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92Z"/></svg>
+          Appeler maintenant
+        </a>
+        <a class="btn btn-line" href="mailto:esposito.guilhem@gmail.com?subject=Demande%20de%20devis%20gratuit%20-%20EG%20Plomberie&amp;body=Bonjour%20Guilhem%2C%0D%0A%0D%0AJe%20souhaite%20obtenir%20un%20devis%20gratuit.%0D%0A%0D%0ANom%20%3A%0D%0AT%C3%A9l%C3%A9phone%20%3A%0D%0ACommune%20%3A%0D%0ANature%20des%20travaux%20%3A%0D%0A%0D%0AMerci.">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2Z"/><polyline points="22,6 12,13 2,6"/></svg>
+          Envoyer un email
+        </a>
+      </div>
+      <div class="cinfos">
+        <a class="ci" href="tel:+33684454880">
+          <span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.91.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92Z"/></svg></span>
+          <span style="text-align:left"><small>Téléphone</small><b>06 84 45 48 80</b></span>
+        </a>
+        <a class="ci email" href="mailto:esposito.guilhem@gmail.com?subject=Demande%20de%20devis%20gratuit%20-%20EG%20Plomberie">
+          <span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2Z"/><polyline points="22,6 12,13 2,6"/></svg></span>
+          <span style="text-align:left"><small>Email</small><b>esposito.guilhem@<wbr>gmail.com</b></span>
+        </a>
+        <div class="ci">
+          <span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 12-9 12s-9-5-9-12a9 9 0 0 1 18 0Z"/><circle cx="12" cy="10" r="3"/></svg></span>
+          <span style="text-align:left"><small>Secteur</small><b>Hérault &amp; Gard</b></span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Footer -->
+<footer class="site">
+  <div class="container">
+    <div class="f-top">
+      <div class="f-brand">
+        <div class="brand">
+          <span class="brand-mark" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2.5S6 9 6 13.5a6 6 0 0 0 12 0C18 9 12 2.5 12 2.5Z"/></svg>
+          </span>
+          <span class="brand-name">EG <span>Plomberie</span></span>
+        </div>
+        <p>L'art de la plomberie et du chauffage depuis 20 ans. Dépannage, urgence, réparation et installation dans l'Hérault et le Gard.</p>
+      </div>
+      <div class="f-col">
+        <h4>Prestations</h4>
+        <ul>
+          <li><a href="#services">Plomberie</a></li>
+          <li><a href="#services">Chauffage</a></li>
+          <li><a href="#services">Dépannage &amp; urgence</a></li>
+          <li><a href="#services">Réparation &amp; installation</a></li>
+        </ul>
+      </div>
+      <div class="f-col">
+        <h4>Contact</h4>
+        <ul>
+          <li class="fl"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.91.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92Z"/></svg><a href="tel:+33684454880">06 84 45 48 80</a></li>
+          <li class="fl"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2Z"/><polyline points="22,6 12,13 2,6"/></svg><a href="mailto:esposito.guilhem@gmail.com">esposito.guilhem@<wbr>gmail.com</a></li>
+          <li class="fl"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 12-9 12s-9-5-9-12a9 9 0 0 1 18 0Z"/><circle cx="12" cy="10" r="3"/></svg>Hérault &amp; Gard</li>
+        </ul>
+      </div>
+    </div>
+    <div class="f-bottom">
+      <span>© <span id="year">2026</span> EG Plomberie — Tous droits réservés.</span>
+      <span>Plombier · Chauffagiste · Savoir-faire artisanal</span>
+    </div>
+  </div>
+</footer>
+
+<a class="fab" href="tel:+33684454880" aria-label="Appeler EG Plomberie">
+  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.91.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92Z"/></svg>
+  Appeler
+</a>
+
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"Plumber","name":"EG Plomberie","description":"Plombier chauffagiste, 20 ans de savoir-faire. Dépannage, urgence, réparation et installation dans l'Hérault et le Gard.","telephone":"+33684454880","email":"esposito.guilhem@gmail.com","areaServed":[{"@type":"AdministrativeArea","name":"Hérault"},{"@type":"AdministrativeArea","name":"Gard"}],"knowsAbout":["Plomberie","Chauffage","Dépannage","Rénovation"],"priceRange":"Devis gratuit"}
+</script>
+
+<script>
+  document.getElementById('year').textContent = new Date().getFullYear();
+  var toggle=document.getElementById('menuToggle'),nav=document.getElementById('nav'),menu=document.getElementById('mobileMenu');
+  toggle.addEventListener('click',function(){var o=nav.classList.toggle('open');toggle.setAttribute('aria-expanded',o?'true':'false');});
+  menu.querySelectorAll('a').forEach(function(a){a.addEventListener('click',function(){nav.classList.remove('open');toggle.setAttribute('aria-expanded','false');});});
+  var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target);}});},{threshold:.12});
+  document.querySelectorAll('.reveal').forEach(function(el){io.observe(el);});
+</script>
+</body>
+</html>
